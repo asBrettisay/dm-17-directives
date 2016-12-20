@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+  <title>My First Directive!</title>
+  <link rel="stylesheet" href="./main.css">
+  </head>
+<body ng-controller="mainCtrl">
+
+    The model's value for name is {{name}}
+    <info-directive name="name"></info-directive>
+
+    <my-directive 
+    when-clicked="alertMe(str, foo)"
+    title="titleClickMe"></my-directive>
+    <my-directive 
+    when-clicked="addThenAlert(str, foo)"
+    title="titleStartParty"></my-directive>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="./src/app.js"></script>
+    <script src="./src/mainCtrl.js"></script>
+    <script src="./src/myDirective.js"></script>
+    <script src="./src/infoDirective.js"></script>
+</body>
+</html>
